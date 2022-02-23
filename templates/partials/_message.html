@@ -4,8 +4,16 @@
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>{{ message }}</strong>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>        
-        <meta http-equiv="refresh" content="3; url=/">
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {             
+            window.setTimeout(function() {
+                $(".alert").fadeTo(300, 0).slideUp(100, function(){
+                    $(this).remove(); 
+                });
+            }, 3000);             
+            });
+            </script>
         {% endfor %}
     {% endif %}
 {% endwith %}
