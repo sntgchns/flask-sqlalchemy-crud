@@ -1,0 +1,1 @@
+iniciar server mySQL port 3306
